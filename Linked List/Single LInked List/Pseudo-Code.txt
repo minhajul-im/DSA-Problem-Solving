@@ -1,0 +1,25 @@
+# Insert
+
+Add(value)
+pre: value is the value to add to the list.
+post: value has been placed at the tail of the list.
+node = new Node(value)
+if head = null
+head = node
+tail = node
+else
+tail.next = node
+tail = node
+end if
+end Add
+
+Prepend(value)
+pre: value is the value to add to the list.
+post: value has been placed at the head of the list.
+node = new Node(value)
+node.next = head
+head = node
+if tail = ø
+tail = node
+end
+end Prepend
