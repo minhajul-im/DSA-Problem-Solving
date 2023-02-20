@@ -16,3 +16,8 @@ var reversePrefix = function (word, ch) {
 
   return wordArr.join("");
 };
+
+let word = "abcdefd",
+  ch = "d";
+
+reversePrefix(word, ch);
