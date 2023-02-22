@@ -1,28 +1,37 @@
+// 977. Squares of a Sorted Array
+
+// descending sorted
 const descendingSortedSquares = (arr) => {
-  let left = 0, right = arr.length - 1;
-  let positionIndex = 0, sortedArr = [];
-  
+  let left = 0,
+    right = arr.length - 1;
+  let positionIndex = 0,
+    sortedArr = [];
+
   while (left <= right) {
     let leftValue = Math.pow(arr[left], 2);
     let rightValue = Math.pow(arr[right], 2);
     if (leftValue > rightValue) {
-      sortedArr[positionIndex] = leftValue; left++;
+      sortedArr[positionIndex] = leftValue;
+      left++;
     } else {
-      sortedArr[positionIndex] = rightValue; right--;
+      sortedArr[positionIndex] = rightValue;
+      right--;
     }
-    positionIndex++
+    positionIndex++;
   }
   console.log(sortedArr);
   return sortedArr;
-}
+};
 
-console.log(descendingSortedSquares([-7, -3, 2, 3, 11]))
+console.log(descendingSortedSquares([-7, -3, 2, 3, 11]));
 
-
+// ascending sorted
 const ascendingSortedSquares = (arr) => {
-  let left = 0, right = arr.length - 1;
-  let sortedArr = [], positionIndex = arr.length - 1;
-  
+  let left = 0,
+    right = arr.length - 1;
+  let sortedArr = [],
+    positionIndex = arr.length - 1;
+
   while (left <= right) {
     let leftValue = Math.pow(arr[left], 2);
     let rightValue = Math.pow(arr[right], 2);
@@ -31,11 +40,16 @@ const ascendingSortedSquares = (arr) => {
       right--;
     } else {
       sortedArr[positionIndex] = leftValue;
-      left++
+      left++;
     }
     positionIndex--;
   }
-  console.log(sortedArr)
+  console.log(sortedArr);
   return sortedArr;
 };
-console.log(ascendingSortedSquares([-7, -3, 2, 3, 11]))
+
+console.log(ascendingSortedSquares([-7, -3, 2, 3, 11]));
+
+let nums = [-4, -1, 0, 3, 10];
+
+descendingSortedSquares(nums);
