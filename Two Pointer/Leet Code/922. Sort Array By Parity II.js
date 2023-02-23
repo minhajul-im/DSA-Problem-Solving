@@ -1,5 +1,10 @@
-var sortArrayByParityII = function(num) {
-  let arr = [], a = 1, b = 0, x = 0;
+//922. Sort Array By Parity II
+
+var sortArrayByParityII = function (num) {
+  let arr = [],
+    a = 1,
+    b = 0,
+    x = 0;
   while (x < num.length) {
     if (num[x] % 2 === 0) {
       arr[b] = num[x];
@@ -12,3 +17,7 @@ var sortArrayByParityII = function(num) {
   }
   return arr;
 };
+
+let nums = [4, 2, 5, 7];
+
+sortArrayByParityII(nums);
