@@ -1,4 +1,4 @@
-// 167. Two Sum II - Input Array Is Sorted
+// 876. Middle of the Linked List
 
 var twoSum = function (nums, target) {
   let l = 0,
@@ -16,3 +16,7 @@ var twoSum = function (nums, target) {
     }
   }
 };
+
+let ead = [1, 2, 3, 4, 5, 6];
+
+twoSum(ead);
