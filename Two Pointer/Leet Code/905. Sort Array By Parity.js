@@ -1,8 +1,12 @@
-var sortArrayByParity = function(num) {
+//905. Sort Array By Parity
+
+var sortArrayByParity = function (num) {
   if (num.length === 0) return num;
   if (num.length === 1) return num;
-  let fast = 0, last = 0, temp;
-  
+  let fast = 0,
+    last = 0,
+    temp;
+
   while (fast < num.length) {
     if (num[fast] % 2 === 0) {
       temp = num[last];
@@ -14,3 +18,7 @@ var sortArrayByParity = function(num) {
   }
   return num;
 };
+
+let nums = [3, 1, 2, 4];
+
+sortArrayByParity(nums);
