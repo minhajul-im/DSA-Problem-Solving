@@ -2,10 +2,12 @@
 
 let arr = [1, 2, 3, 4, 5, 6, 7, 8];
 
+// reverse while loop
 const reverseWhile = (arr) => {
   let temp,
     start = 0,
     end = arr.length - 1;
+
   while (start <= end) {
     temp = arr[start];
     arr[start] = arr[end];
@@ -13,11 +15,13 @@ const reverseWhile = (arr) => {
     start++;
     end--;
   }
+
   return arr;
 };
 
 console.log(reverseWhile(arr));
 
+// reverse for loop
 const reverseFor = (arr) => {
   let temp;
 
@@ -26,8 +30,10 @@ const reverseFor = (arr) => {
     arr[i] = arr[j];
     arr[j] = temp;
   }
+
   return arr;
 };
+
 let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 console.log(reverseFor(arr1));
