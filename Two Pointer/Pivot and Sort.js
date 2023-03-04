@@ -1,6 +1,7 @@
 /**
- * @param the pivot data is greater than the left data & the pivot data is  less than the right data.
+ the pivot data is greater than the left data & the pivot data is  less than the right data.
  */
+
 const greaterThanPivotLessThan = (arr) => {
   let start = 0,
     end = arr.length - 1,
@@ -45,8 +46,10 @@ const greaterThanPivotLessThan = (arr) => {
   return arr;
 };
 
-let arr = [10, 20, 5, 2, 9, 19, 40, 30];
+let arr1 = [10, 20, 5, 2, 9, 19, 40, 30];
 
-// let arr = [16, 10, 30, 15, 18, 50, 25, 12, 35, 8];
+let arr = [16, 10, 30, 15, 18, 50, 25, 12, 35, 8];
+
+console.log(greaterThanPivotLessThan(arr1));
 
 console.log(greaterThanPivotLessThan(arr));
