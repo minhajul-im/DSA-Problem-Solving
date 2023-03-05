@@ -1,4 +1,4 @@
-var search = function(nums, target) {
+const search = (nums, target) => {
   let mid; start= 0; end = nums.length -1;
 
   while (start <= end){
