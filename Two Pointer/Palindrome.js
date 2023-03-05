@@ -15,7 +15,7 @@ const palindrome = (str) => {
 
 console.log(palindrome("madam"));
 
-// check   is palindrome or not palindrome
+// check is palindrome or not palindrome
 const palindromeFor = (str) => {
   let temp;
   for (let i = 0, j = str.length - 1; i <= j; i++, j--) {
@@ -25,13 +25,12 @@ const palindromeFor = (str) => {
       return false;
     }
   }
+
   return true;
 };
 console.log(palindromeFor("mom"));
 console.log(palindromeFor("wow"));
 console.log(palindromeFor("minhaj"));
-
-const arr = ["minhaj", "john", "ada", "hello", "mom", "wow", "titt", "dad"];
 
 // find first palindrome in the array.
 const findFirstPalindrome = (arr) => {
@@ -40,8 +39,11 @@ const findFirstPalindrome = (arr) => {
       return arr[i];
     }
   }
+
   return false;
 };
+
+const arr = ["minhaj", "john", "ada", "hello", "mom", "wow", "titt", "dad"];
 
 console.log(findFirstPalindrome(arr));
 
@@ -57,6 +59,7 @@ const countPalindrome = (arr) => {
     }
     start++;
   }
+
   return count;
 };
 
