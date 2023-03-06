@@ -1,5 +1,7 @@
 const data = [10, 1, 9, 2, 8, 3, 7, 4, 6, 5];
 
+/* In bubble sort, two adjacent elements are compared. If the adjacent elements aren't in the correct position, swapping would be performed.*/
+
 // Ascending order Bubble Sort
 const ascendingBubbleSort = (data) => {
   //when we swap the first data will be lost that's why we store it in a temporary variable, because it's an updatable.

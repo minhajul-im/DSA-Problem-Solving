@@ -1,3 +1,5 @@
+/* The linear search starts searching from the first element and compares each element with a searched element till the element is not found.*/
+
 const data = [10, 20, 30, 40, 50]; // These are all data.
 const target = 30; // Our target value.
 

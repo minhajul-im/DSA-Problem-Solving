@@ -1,3 +1,5 @@
+/* Binary search is a 'divide and conquer' algorithm which requires the initial array to be sorted before searching. It is called binary because it splits the array into two halves as part of the algorithm. Initially, a binary search will look at the item in the middle of the array and compare it to the search terms. */
+
 // Ascending Order Binary Search.
 
 const data = [10, 13, 15, 16, 17, 18, 19, 20];

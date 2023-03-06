@@ -1,3 +1,5 @@
+/* Order-Agnostic Binary Search is a modified version of the Binary Search algorithm. Here this modified binary search comes with one more condition checking. The intuition behind & in front of this algorithm is what if the order of the sorted array isn't given that's why use Order Agnostic Binary Search */
+  
 // Order Agnostic Binary Search
 
 const a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
