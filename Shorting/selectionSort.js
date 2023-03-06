@@ -1,6 +1,7 @@
+/*TODO: In selection sort, the minimum element is selected from the array and swapped with an element that is at the beginning of the unsorted first data.*/
+
 const data = [10, 9, 1, 6, 14, 8, 4, 6, 3, 2, 7];
 
-/* In selection sort, the minimum element is selected from the array and swapped with an element that is at the beginning of the unsorted first data.*/
 
 // Ascending Selection Sort
 const ascendingSelectionSort = (data) => {

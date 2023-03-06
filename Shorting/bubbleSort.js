@@ -1,6 +1,6 @@
-const data = [10, 1, 9, 2, 8, 3, 7, 4, 6, 5];
+/* TODO: In bubble sort, two adjacent elements are compared. If the adjacent elements aren't in the correct position, swapping would be performed.*/
 
-/* In bubble sort, two adjacent elements are compared. If the adjacent elements aren't in the correct position, swapping would be performed.*/
+const data = [10, 1, 9, 2, 8, 3, 7, 4, 6, 5];
 
 // Ascending order Bubble Sort
 const ascendingBubbleSort = (data) => {
