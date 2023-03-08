@@ -16,3 +16,8 @@ var twoSum = function (nums, target) {
     }
   }
 };
+
+let numbers = [2, 7, 11, 15],
+  target = 9;
+
+console.log(twoSum(numbers));
