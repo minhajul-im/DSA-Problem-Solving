@@ -21,3 +21,7 @@ var findPeakElement = function (nums) {
 
   return -1;
 };
+
+let nums = [1, 2, 3, 1];
+
+console.log(findPeakElement(nums));
