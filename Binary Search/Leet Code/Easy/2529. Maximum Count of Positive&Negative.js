@@ -14,3 +14,7 @@ const maximumCount = (nums) => {
 
   return p > n ? p : n;
 };
+
+let nums = [-2, -1, -1, 1, 2, 3];
+
+console.log(maximumCount(nums));
