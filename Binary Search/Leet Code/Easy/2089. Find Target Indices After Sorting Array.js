@@ -20,3 +20,8 @@ var targetIndices = function (nums, target) {
 
   return arr;
 };
+
+let nums = [1, 2, 5, 2, 3],
+  target = 2;
+
+console.log(targetIndices(nums, target));
