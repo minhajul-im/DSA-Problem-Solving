@@ -18,3 +18,8 @@ var nextGreatestLetter = function (letters, target) {
 
   return letters[0];
 };
+
+let letters = ["c", "f", "j"],
+  target = "a";
+
+console.log(nextGreatestLetter(letters, target));
