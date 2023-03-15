@@ -14,3 +14,8 @@ var guessNumber = function (n) {
     if (x === 1) s = mid + 1;
   }
 };
+
+let n = 10,
+  pick = 6;
+
+console.log(guessNumber(n, pick));
