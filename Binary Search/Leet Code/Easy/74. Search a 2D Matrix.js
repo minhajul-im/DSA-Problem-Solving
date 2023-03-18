@@ -1,5 +1,3 @@
-// 74. Search a 2D Matrix
-
 function binarySearch(arr, target) {
   let left = 0,
     right = arr.length - 1,
@@ -19,8 +17,12 @@ function binarySearch(arr, target) {
   return false;
 }
 
+// 74. Search a 2D Matrix
+
 var searchMatrix = function (matrix, target) {
-  if (matrix.length == 0 || matrix[0].length == 0) return false;
+  if (matrix.length == 0 || matrix[0].length == 0) {
+    return false;
+  }
 
   let left = 0,
     right = matrix.length - 1,
