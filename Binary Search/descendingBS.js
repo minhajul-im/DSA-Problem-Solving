@@ -1,8 +1,9 @@
-/**Descending Order Binary Search
- * @param {Descending Order Binary Search}
- */
-const element = [20, 19, 17, 16, 15, 13, 12, 11];
+//Descending Order Binary Search
+
+const element = [20, 19, 17, 16, 8, 5, 3, 1];
+
 const targetElement = 17;
+
 const descendingBinarySearch = (element, target) => {
   let mid;
   start = 0;
@@ -20,6 +21,8 @@ const descendingBinarySearch = (element, target) => {
       end = --mid;
     }
   }
+
   return `Data isn't Found`;
 };
+
 console.log(descendingBinarySearch(element, targetElement));
