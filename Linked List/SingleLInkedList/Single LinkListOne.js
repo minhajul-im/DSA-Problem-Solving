@@ -44,8 +44,6 @@ class SingleLinkList {
       prePosition.next = node;
       this.length++;
     }
-    
-
   }
 
   // find position index
