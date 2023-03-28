@@ -93,8 +93,6 @@ class SingleLinkList {
       this.length--;
     }
   }
-  
-
 
 }
 
