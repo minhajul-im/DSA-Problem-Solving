@@ -35,6 +35,16 @@ class Sum {
     console.log(sum)
     return sum;
   }
+  addSum(head) {
+    let data = head;
+    let result = 0;
+    while (data) {
+      result = result + data.value;
+      data = data.next;
+    }
+    console.log(result)
+    return result;
+  }
 }
 
 const list = new Sum();
@@ -44,4 +54,6 @@ list.insertNode(15)
 list.insertNode(20)
 list.insertNode(25)
 console.log(list.sumNode())
+console.log(list.addSum(list.head))
+console.log(list.head)
 console.log(list)
