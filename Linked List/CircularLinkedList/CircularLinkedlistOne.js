@@ -56,19 +56,18 @@ class CircularLinkList {
     let node = new Node(value);
     if (position === 1) {
       this.preInsert(value);
-    }
-    if (position === this.length + 1) {
+    } else if (position === this.length + 1) {
       this.postInsert(value);
-    } 
-
-    let prePosition = this.findNode(position - 1);
-    let postPosition = this.findNode(position);
-    node.next = prePosition.next;
-    postPosition.pre = node;
-    node.pre = prePosition;
-    node.next = postPosition;
-    prePosition.next = node;
-    this.length++;
+    } else {
+      let prePosition = this.findNode(position - 1);
+      let postPosition = this.findNode(position);
+      node.next = prePosition.next;
+      postPosition.pre = node;
+      node.pre = prePosition;
+      node.next = postPosition;
+      prePosition.next = node;
+      this.length++;
+    }
   }
   
   // delete Node
