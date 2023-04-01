@@ -144,6 +144,10 @@ class AssignmentOfLinkedList {
     let place = this.findNodePosition(position);
     place.value = value;
   }
+  //11. Supports concatenating two linked lists.
+  concatenatingTwoLinkedList() {
+    
+  }
   //12. Supports reversing the linked list.
   ascendingNode() {
     let data = this.head;
@@ -169,8 +173,35 @@ class AssignmentOfLinkedList {
     console.log(arr);
     return arr;
   }
-  //13. Find the mid value of a linked list.
+  // 13. Find the mid value of a linked list. TODO: It's use for single link list.
+  /*findMidNodeWithOutIndex() {
+    let slow = this.head;
+    let fast = this.head;
+    let count = 1;
+    while (fast.next) {
+      count++;
+      slow = slow.next;
+      fast = fast.next;
+      if (fast.next) fast = fast.next;
+    }
+    console.log(slow.value, count);
+    return slow.value, count;
+  }*/
   
+  //15. Detect cycle in a linked list.
+  circleNode() {
+    let slow = this.head;
+    let fast = this.head;
+    while (this.head) {
+      slow = slow.next;
+      fast = fast.next.next;
+      if (slow === fast) {
+        console.log(slow.value, fast.value)
+        return true;
+      }
+    }
+    return false;
+  }
 }
 
 
@@ -186,14 +217,12 @@ list.insertAnyPosition(6, 60)
 // list.deleteFirstNode()
 // list.deleteLastNode();
 // list.deleteAnyPosition(1);
-list.searchingNode(100);
+// list.searchingNode(100);
 // list.updatingNode(4,2000)
 // list.ascendingNode()
-list.descendingNode()
+// list.descendingNode()
 
-
-
-
+list.circleNode()
 console.log(list)
 
 

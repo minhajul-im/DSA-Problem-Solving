@@ -59,17 +59,17 @@ class HareAndTortoise{
   }
 
   findMidNode() {
-    let x = this.head;
-    let y = this.head;
+    let slow = this.head;
+    let fast = this.head;
     let count = 1;
-    while (y.next) {
+    while (fast.next) {
       count++;
-      x = x.next;
-      y = y.next;
-      if (y.next) y = y.next;
+      slow = slow.next;
+      fast = fast.next;
+      if (fast.next) fast = fast.next;
     }
-    console.log(x.value, count);
-    return x.value, count;
+    console.log(slow.value, count);
+    return slow.value, count;
   }
 
 }
