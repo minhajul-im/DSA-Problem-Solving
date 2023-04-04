@@ -1,4 +1,4 @@
-//TODO: --> FAST IN LAST OUT OR LAST IN FAST OUT, (LIFO)
+// --> TODO: INSERTION & DELETION ARE BOTH POSSIBLE FROM BOTH END
 
 class Node{
   constructor(value, next = null) {
@@ -7,7 +7,7 @@ class Node{
   }
 }
 
-class Stack {
+class DEQue {
   constructor() {
     this.head;
     this.tail;
@@ -17,20 +17,38 @@ class Stack {
   isEmpty() {
     return this.length === 0;
   }
-  // push element on linked list
-  push(value) {
+  //pre add element 
+  frontInsert(value) {
+    let node = new Node(value);
+    node.next = this.head;
+    this.head = node;
+    this.length++;
+  }
+  // push element in linked list
+  rearInsert(value) {
     let node = new Node(value);
     if (this.isEmpty()) {
       this.head = this.tail = node;
     }
     else {
+      console.log(this.tail.value)
       this.tail.next = node;
       this.tail = node;
     }
     this.length++;
   }
-  // last element delete in linked list
-  pop() {
+  // dequeue fast element delete
+  frontDelete() {
+    if (this.length === 1) {
+      this.head = this.tail = null;
+    } else {
+    let head = this.head.next;
+    this.head = head;
+    }
+    this.length--;
+  }
+  // last element delete 
+  rearDelete() {
     if (this.length === 1) {
       this.head = null; this.tail = null;
       this.length--;
@@ -57,7 +75,7 @@ class Stack {
       return result;
     }
   }
-  // check size on linked list
+  // check size element in linked list
   size() {
     let result = this.length, count = 0;
     let data = this.head;
@@ -70,15 +88,16 @@ class Stack {
     return result, count;
   }
 }
-const stack = new Stack();
-stack.push(10)
-stack.push(20)
-stack.push(30)
-stack.push(40)
-// stack.pop()
-// stack.pop()
-// stack.pop()
-// stack.pop()
-stack.peek()
-stack.size();
-console.log(stack)
+const deQue = new DEQue();
+deQue.rearInsert(10)
+deQue.rearInsert(20)
+deQue.rearInsert(30)
+deQue.rearInsert(40)
+deQue.frontInsert(5)
+deQue.rearDelete()
+deQue.rearDelete()
+// deQue.frontDelete()
+// deQue.frontDelete()
+// deQue.peek()
+deQue.size();
+console.log(deQue)

@@ -7,7 +7,7 @@ class Node{
   }
 }
 
-class Stack {
+class Queue {
   constructor() {
     this.head;
     this.tail;
@@ -17,7 +17,7 @@ class Stack {
   isEmpty() {
     return this.length === 0;
   }
-  // push element
+  // push element on linked list
   enqueue(value) {
     let node = new Node(value);
     if (this.isEmpty()) {
@@ -48,7 +48,7 @@ class Stack {
       return result;
     }
   }
-  //size
+  // check size linked list
   size() {
     let result = this.length, count = 0;
     let data = this.head;
@@ -61,15 +61,15 @@ class Stack {
     return result, count;
   }
 }
-const stack = new Stack();
-stack.enqueue(10)
-stack.enqueue(20)
-stack.enqueue(30)
-stack.enqueue(40)
-stack.dequeue()
-stack.dequeue()
-stack.dequeue()
-// stack.dequeue()
-stack.peek()
-stack.size();
-console.log(stack)
+const queue = new Queue();
+queue.enqueue(10)
+queue.enqueue(20)
+queue.enqueue(30)
+queue.enqueue(40)
+queue.dequeue()
+queue.dequeue()
+queue.dequeue()
+// queue.dequeue()
+queue.peek()
+queue.size();
+console.log(queue)
