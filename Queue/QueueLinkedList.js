@@ -1,4 +1,4 @@
-//TODO: --> FAST IN LAST OUT OR LAST IN FAST OUT, (LIFO)
+// TODO: --> FAST IN FAST OUT (FIFO)
 
 class Node{
   constructor(value, next = null) {
@@ -18,7 +18,7 @@ class Stack {
     return this.length === 0;
   }
   // push element
-  push(value) {
+  enqueue(value) {
     let node = new Node(value);
     if (this.isEmpty()) {
       this.head = this.tail = node;
@@ -30,23 +30,14 @@ class Stack {
     this.length++;
   }
   // last element delete 
-  pop() {
+  dequeue() {
     if (this.length === 1) {
-      this.head = null; this.tail = null;
-      this.length--;
+      this.head = this.tail = null;
     } else {
-      let data = this.head;
-      let tail;
-      while (data) {
-        if (data.next === this.tail) {
-          tail = data;
-        }
-        data = data.next;
-      }
-      this.tail = tail;
-      this.tail.next = null;
-      this.length--;
+    let head = this.head.next;
+    this.head = head;
     }
+    this.length--;
   }
   // top element check just for see not remove
   peek() {
@@ -71,14 +62,14 @@ class Stack {
   }
 }
 const stack = new Stack();
-stack.push(10)
-stack.push(20)
-stack.push(30)
-stack.push(40)
-// stack.pop()
-// stack.pop()
-// stack.pop()
-// stack.pop()
+stack.enqueue(10)
+stack.enqueue(20)
+stack.enqueue(30)
+stack.enqueue(40)
+stack.dequeue()
+stack.dequeue()
+stack.dequeue()
+// stack.dequeue()
 stack.peek()
 stack.size();
 console.log(stack)
