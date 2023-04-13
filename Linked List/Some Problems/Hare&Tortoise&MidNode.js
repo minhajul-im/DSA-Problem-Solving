@@ -1,16 +1,18 @@
 class Node {
-  constructor(value, next= null){
+  constructor(value, next = null) {
     this.value = value;
     this.next = next;
   }
 }
 
-class HareAndTortoise{
+class HareAndTortoise {
   constructor(value) {
     let node = new Node(value);
     this.head = this.tail = node;
     this.length = 1;
   }
+
+  //pre insert node
   preInsert(value) {
     let node = new Node(value);
     node.next = this.head;
@@ -18,6 +20,7 @@ class HareAndTortoise{
     this.length++;
   }
 
+  //post inset node
   postInsert(value) {
     let node = new Node(value);
     this.tail.next = node;
@@ -26,6 +29,7 @@ class HareAndTortoise{
     this.length++;
   }
 
+  // insert any position
   insertAnyPosition(position, value) {
     if (position === 1) {
       this.preInsert(value);
@@ -39,6 +43,8 @@ class HareAndTortoise{
       this.length++;
     }
   }
+
+  //find position
   findPosition(position) {
     let head = this.head;
     let count = 1;
@@ -50,6 +56,7 @@ class HareAndTortoise{
     return head;
   }
 
+  //print node
   printNode() {
     let head = this.head;
     while (head) {
@@ -58,6 +65,7 @@ class HareAndTortoise{
     }
   }
 
+  //find mid node
   findMidNode() {
     let slow = this.head;
     let fast = this.head;
@@ -71,7 +79,6 @@ class HareAndTortoise{
     console.log(slow.value, count);
     return slow.value, count;
   }
-
 }
 
 const list = new HareAndTortoise(10);
@@ -81,10 +88,7 @@ list.insertAnyPosition(3, 20);
 list.insertAnyPosition(2, 35);
 list.insertAnyPosition(4, 85);
 list.insertAnyPosition(1, 50);
-list.findMidNode()
-list.printNode()
+list.findMidNode();
+list.printNode();
 
-
-
-
-console.log(list)
+console.log(list);

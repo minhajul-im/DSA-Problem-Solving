@@ -14,6 +14,8 @@ class CheckCircleLinkedList {
     this.tail.next = this.head;
     this.length = 1;
   }
+
+  //pre insert node
   preInsertNode(value) {
     let node = new Node(value);
     node.next = this.head;
@@ -23,6 +25,8 @@ class CheckCircleLinkedList {
     this.tail.next = this.head;
     this.length++;
   }
+
+  //post insert node
   postInsertNode(value) {
     let node = new Node(value);
     node.pre = this.tail;
@@ -32,6 +36,8 @@ class CheckCircleLinkedList {
     this.head.pre = this.tail;
     this.length++;
   }
+
+  //insert any position
   insertAnyPosition(position, value) {
     let node = new Node(value);
     if (position === 1) {
@@ -48,30 +54,35 @@ class CheckCircleLinkedList {
       this.length++;
     }
   }
+
+  // find node position
   findNodePosition(position) {
     let data = this.head;
     let count = 1;
     while (data) {
       if (count === position) break;
-      count++; 
+      count++;
       data = data.next;
     }
     return data;
   }
+
+  //ascending nod
   ascendingNode() {
     let data = this.head;
-    let length = 1, arr = [];
+    let length = 1,
+      arr = [];
     while (length <= this.length) {
       console.log(data.value);
-      arr.push(data.value)
+      arr.push(data.value);
       data = data.next;
       this.length--;
     }
-    console.log(arr)
+    console.log(arr);
     return arr;
   }
 
- //is circle linked list or not circle linked list
+  //is circle linked list or not circle linked list
   circleNode() {
     let x = this.head;
     let y = this.head;
@@ -79,7 +90,7 @@ class CheckCircleLinkedList {
       x = x.next;
       y = y.next.next;
       if (x === y) {
-        console.log(x.value, y.value)
+        console.log(x.value, y.value);
         return true;
       }
     }
@@ -87,14 +98,13 @@ class CheckCircleLinkedList {
   }
 }
 const list = new CheckCircleLinkedList(30);
-list.preInsertNode(20)
-list.preInsertNode(2)
-list.postInsertNode(40)
-list.insertAnyPosition(1, 10)
-list.insertAnyPosition(5, 50)
-list.insertAnyPosition(6, 60)
-list.ascendingNode()
-list.circleNode()
+list.preInsertNode(20);
+list.preInsertNode(2);
+list.postInsertNode(40);
+list.insertAnyPosition(1, 10);
+list.insertAnyPosition(5, 50);
+list.insertAnyPosition(6, 60);
+list.ascendingNode();
+list.circleNode();
 
-
-console.log(list)
+console.log(list);

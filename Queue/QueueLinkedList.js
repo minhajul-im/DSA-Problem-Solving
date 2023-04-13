@@ -13,10 +13,12 @@ class Queue {
     this.tail;
     this.length = 0;
   }
+
   // check is empty or not
   isEmpty() {
     return this.length === 0;
   }
+
   // push element on linked list
   enqueue(value) {
     let node = new Node(value);
@@ -28,6 +30,7 @@ class Queue {
     }
     this.length++;
   }
+
   // last element delete
   dequeue() {
     if (this.length === 1) {
@@ -42,6 +45,7 @@ class Queue {
     this.length--;
     return y;
   }
+
   // top element check just for see not remove
   peek() {
     if (this.length === 0) return null;
@@ -51,6 +55,7 @@ class Queue {
       return result;
     }
   }
+
   // check size linked list
   size() {
     let result = this.length,

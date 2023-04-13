@@ -1,16 +1,18 @@
 class Node {
-  constructor(value, next= null){
+  constructor(value, next = null) {
     this.value = value;
     this.next = next;
   }
 }
 
-class FindPositionNodeWithOutIndex{
+class FindPositionNodeWithOutIndex {
   constructor(value) {
     let node = new Node(value);
     this.head = this.tail = node;
     this.length = 1;
   }
+
+  //pre insert node
   preInsert(value) {
     let node = new Node(value);
     node.next = this.head;
@@ -18,6 +20,7 @@ class FindPositionNodeWithOutIndex{
     this.length++;
   }
 
+  //post insert node
   postInsert(value) {
     let node = new Node(value);
     this.tail.next = node;
@@ -26,6 +29,7 @@ class FindPositionNodeWithOutIndex{
     this.length++;
   }
 
+  //insert any position node
   insertAnyPosition(position, value) {
     if (position === 1) {
       this.preInsert(value);
@@ -39,6 +43,8 @@ class FindPositionNodeWithOutIndex{
       this.length++;
     }
   }
+
+  //find position node
   findPosition(position) {
     let head = this.head;
     let count = 1;
@@ -50,6 +56,7 @@ class FindPositionNodeWithOutIndex{
     return head;
   }
 
+  //print node
   printNode() {
     let head = this.head;
     while (head) {
@@ -57,24 +64,27 @@ class FindPositionNodeWithOutIndex{
       head = head.next;
     }
   }
+
+  //find position by index
   findPositionIndex(target) {
     let data = this.head;
-    let first = null, last = null, count = 0;
+    let first = null,
+      last = null,
+      count = 0;
     while (data) {
       if (data.value === target) {
         if (!first) {
-          first = count
+          first = count;
         } else {
           last = count;
         }
       }
-      data = data.next; count++;
+      data = data.next;
+      count++;
     }
     console.log([first, last]);
-    return [first, last]
+    return [first, last];
   }
-
-
 }
 const list = new FindPositionNodeWithOutIndex(20);
 list.preInsert(20);
@@ -83,7 +93,7 @@ list.insertAnyPosition(3, 20);
 list.insertAnyPosition(2, 35);
 list.insertAnyPosition(4, 85);
 list.insertAnyPosition(1, 50);
-list.findPositionIndex(20)
-list.printNode()
+list.findPositionIndex(20);
+list.printNode();
 
-console.log(list)
+console.log(list);
