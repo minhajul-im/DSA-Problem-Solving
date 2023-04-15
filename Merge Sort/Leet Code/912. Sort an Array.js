@@ -53,3 +53,58 @@ var sortArray = function (nums) {
 
   return nums;
 };
+
+//--------------- TODO: EXTRA SOLVE ------------------ -->
+
+const merge = (arr, left, mid, right) => {
+  const newArr = [];
+
+  let i = left,
+    j = mid + 1;
+  let k = i;
+
+  // twice array check
+  while (i <= mid && j <= right) {
+    if (arr[i] <= arr[j]) {
+      newArr[k] = arr[i];
+      i++;
+    } else {
+      newArr[k] = arr[j];
+      j++;
+    }
+    k++;
+  }
+
+  //copy temporary array
+  if (i > mid) {
+    while (j <= right) {
+      newArr[k] = arr[j];
+      k++;
+      j++;
+    }
+  } else {
+    while (i <= mid) {
+      newArr[k] = arr[i];
+      k++;
+      i++;
+    }
+  }
+  // set original array
+  for (let x = left; x <= right; x++) {
+    arr[x] = newArr[x];
+  }
+};
+
+const sortArrayExtra = (arr, left = 0, right = arr.length - 1) => {
+  if (arr.length === 1) return arr;
+
+  if (left >= right) return;
+
+  let mid = Math.trunc((left + right) / 2);
+
+  sortArray(arr, left, mid);
+  sortArray(arr, mid + 1, right);
+  merge(arr, left, mid, right);
+
+  return arr;
+};
