@@ -1,5 +1,3 @@
-let arr = [14, 10, 30, 15, 18, 5, 25, 12, 35, 8];
-
 /**
  * @param the pivot data is greater than the left data & the pivot data is  less than the right data.
  */
@@ -9,11 +7,14 @@ const greaterThanPivotLessThan = (arr) => {
     count = 0;
 
   // find data smaller than "pivot" data in the array.
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = start; i < end; i++) {
     if (arr[start] > arr[i]) {
       count++;
     }
   }
+
+  // when you recursion use then can use the condition
+  // count += start;
 
   // swapping with pivot data
   let temp = arr[start];
@@ -27,9 +28,7 @@ const greaterThanPivotLessThan = (arr) => {
   let left = start,
     right = end;
 
-  /* if the left index doesn't equal the count index or the right index doesn't equal the count index then the loop will continue
-  otherwise, if the left index is equal to the count index or the right index is equal to the count index then the loop will close.*/
-  while (left !== count || right !== count) {
+  while (left < count || right > count) {
     if (arr[left] > pivot && arr[right] < pivot) {
       let temp = arr[left];
       arr[left] = arr[right];
@@ -45,5 +44,9 @@ const greaterThanPivotLessThan = (arr) => {
 
   return arr;
 };
+
+let arr = [10, 20, 5, 2, 9, 19, 40, 30];
+
+// let arr = [16, 10, 30, 15, 18, 50, 25, 12, 35, 8];
 
 console.log(greaterThanPivotLessThan(arr));
