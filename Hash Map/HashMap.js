@@ -34,6 +34,7 @@ class HashMap {
   }
 }
 const hashMap = new HashMap();
+
 hashMap.setData("Name", "Minhajul Islam");
 hashMap.setData("age", 21);
 hashMap.setData("learn", "English & coding");
