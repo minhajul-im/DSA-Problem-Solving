@@ -46,6 +46,18 @@ class BinarySearchTree {
       root = root.right;
     }
   }
+
+  // successor
+  successor() {
+    let root = this.root.right;
+
+    while (true) {
+      if (!root.left) {
+        return root.value;
+      }
+      root = root.left;
+    }
+  }
 }
 const tree = new BinarySearchTree(10);
 tree.insert(8);
@@ -56,5 +68,6 @@ tree.insert(7);
 tree.insert(71);
 tree.insert(30);
 console.log(tree.predecessor());
+console.log(tree.successor());
 
 console.log(tree);
