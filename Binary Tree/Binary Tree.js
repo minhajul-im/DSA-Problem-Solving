@@ -39,7 +39,7 @@ class BinaryTree {
   search(target) {
     let root = this.root;
 
-    while (true) {
+    while (root) {
       if (root.value === target) {
         return true;
       } else if (root.value < target) {
@@ -50,6 +50,7 @@ class BinaryTree {
         root = root.left;
       }
     }
+    return false;
   }
 }
 const list = new BinaryTree(10);
