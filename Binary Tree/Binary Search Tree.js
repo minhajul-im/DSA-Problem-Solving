@@ -35,6 +35,24 @@ class BinarySearchTree {
     }
   }
 
+  // search
+  search(target) {
+    let root = this.root;
+
+    while (root) {
+      if (root.value === target) {
+        return true;
+      } else if (root.value < target) {
+        if (!root.right) return false;
+        root = root.right;
+      } else {
+        if (!root.left) return false;
+        root = root.left;
+      }
+    }
+    return false;
+  }
+
   // predecessor
   predecessor() {
     let root = this.root.left;
@@ -67,6 +85,10 @@ tree.insert(1);
 tree.insert(7);
 tree.insert(71);
 tree.insert(30);
+
+console.log(tree.search(1));
+console.log(tree.search(100));
+
 console.log(tree.predecessor());
 console.log(tree.successor());
 

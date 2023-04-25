@@ -34,24 +34,6 @@ class BinaryTree {
       }
     }
   }
-
-  // search node
-  search(target) {
-    let root = this.root;
-
-    while (root) {
-      if (root.value === target) {
-        return true;
-      } else if (root.value < target) {
-        if (!root.right) return false;
-        root = root.right;
-      } else {
-        if (!root.left) return false;
-        root = root.left;
-      }
-    }
-    return false;
-  }
 }
 const list = new BinaryTree(10);
 console.log(list);
@@ -64,8 +46,5 @@ list.insert(2);
 list.insert(7);
 list.insert(6);
 list.insert(1);
-
-console.log(list.search(2));
-console.log(list.search(29));
 
 console.log(list);
