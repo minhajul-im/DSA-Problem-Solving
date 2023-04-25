@@ -36,7 +36,11 @@ class DepthFirstSearch {
     return false;
   }
 
-  // depth first search (in order, pre order, post order - traversing);
+  /**
+   * @param {depth first search (in order, pre order, post order - traversing)}
+   */
+
+  // in order traversing
   inOrder(root) {
     if (root.left) {
       this.inOrder(root.left);
@@ -62,6 +66,19 @@ class DepthFirstSearch {
       this.preOrder(root.right);
     }
   }
+
+  //post order traversing
+  postOrder(root) {
+    if (root.left) {
+      this.postOrder(root.left);
+    }
+
+    if (root.right) {
+      this.postOrder(root.right);
+    }
+
+    console.log(root.value);
+  }
 }
 const depth = new DepthFirstSearch(10);
 depth.insert(5);
@@ -78,5 +95,6 @@ depth.insert(9);
 
 depth.inOrder(depth.root);
 depth.preOrder(depth.root);
+depth.postOrder(depth.root);
 
 console.log(depth);
