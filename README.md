@@ -1,4 +1,4 @@
-# DSA
+# DSA (Data Structure & Algorithms)
 
 We will explore data structure & algorithm.
 
