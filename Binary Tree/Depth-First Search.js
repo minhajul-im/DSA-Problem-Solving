@@ -37,16 +37,16 @@ class DepthFirstSearch {
   }
 
   // depth first search (in order, pre order, post order - traversing);
-  DFS(root) {
+  inOrder(root) {
     if (root.left) {
-      this.DFS(root.left);
+      this.inOrder(root.left);
     }
 
     //print
     console.log(root.value);
 
     if (root.right) {
-      this.DFS(root.right);
+      this.inOrder(root.right);
     }
   }
 }
@@ -63,6 +63,6 @@ depth.insert(12);
 depth.insert(6);
 depth.insert(9);
 
-depth.DFS(depth.root);
+depth.inOrder(depth.root);
 
 console.log(depth);
