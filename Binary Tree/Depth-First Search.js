@@ -49,6 +49,19 @@ class DepthFirstSearch {
       this.inOrder(root.right);
     }
   }
+
+  // pre order traversing
+  preOrder(root) {
+    console.log(root.value);
+
+    if (root.left) {
+      this.preOrder(root.left);
+    }
+
+    if (root.right) {
+      this.preOrder(root.right);
+    }
+  }
 }
 const depth = new DepthFirstSearch(10);
 depth.insert(5);
@@ -64,5 +77,6 @@ depth.insert(6);
 depth.insert(9);
 
 depth.inOrder(depth.root);
+depth.preOrder(depth.root);
 
 console.log(depth);
