@@ -7,7 +7,7 @@ class Node {
   }
 }
 
-class SingleLinkedList{
+class SingleLinkedList {
   constructor() {
     this.head;
     this.tail;
@@ -27,9 +27,10 @@ class SingleLinkedList{
     this.length++;
   }
 
-  // post insert node 
+  // post insert node
   insertNode(value) {
     let node = new Node(value);
+
     if (this.isEmptyNode()) {
       this.head = this.tail = node;
     } else {
@@ -38,7 +39,7 @@ class SingleLinkedList{
     }
     this.length++;
   }
-  
+
   //mid insert node
   midInsetNode(position, value) {
     let node = new Node(value);
@@ -74,7 +75,8 @@ class SingleLinkedList{
     let tailData;
     while (headData) {
       if (headData.next === this.tail) {
-        tailData = headData; break;
+        tailData = headData;
+        break;
       }
       headData = headData.next;
     }
@@ -90,8 +92,8 @@ class SingleLinkedList{
     find1.next = find2;
     this.length--;
   }
-  
-  //update node 
+
+  //update node
   updateNode(position, value) {
     let place = this.findPositionNode(position);
     place.value = value;
@@ -105,21 +107,19 @@ class SingleLinkedList{
       data = data.next;
     }
   }
-
 }
 
 const list = new SingleLinkedList();
-list.insertNode(5)
-list.insertNode(10)
-list.insertNode(15)
-list.insertNode(20)
-list.insertNode(25)
-list.insertNode(30)
+list.insertNode(5);
+list.insertNode(10);
+list.insertNode(15);
+list.insertNode(20);
+list.insertNode(25);
+list.insertNode(30);
 // list.preDeleteNode()
 // list.postDeleteNode()
 // list.midDeleteNode(3)
-list.updateNode(6,100)
+list.updateNode(6, 100);
 list.printNode();
 
-
-console.log(list)
+console.log(list);

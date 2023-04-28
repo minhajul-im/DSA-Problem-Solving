@@ -6,7 +6,7 @@ class Node {
   }
 }
 
-class DoublyLinkedList{
+class DoublyLinkedList {
   constructor() {
     this.head;
     this.tail;
@@ -27,7 +27,7 @@ class DoublyLinkedList{
       this.tail.next = node;
       node.pre = this.tail;
     }
-      this.length++;
+    this.length++;
   }
 
   //pre insert node
@@ -39,22 +39,20 @@ class DoublyLinkedList{
     this.length++;
   }
 
-  // first node delete 
+  // first node delete
   firstNodeDelete() {
     let head = this.head.next;
     this.head = head;
     this.head.pre = null;
     this.length--;
   }
-
 }
 
 const list = new DoublyLinkedList();
 list.insertNode(5);
 list.insertNode(10);
 list.preInsertNode(3);
-list.insertNode(15)
-// list.firstNodeDelete()
+list.insertNode(15);
+// list.firstNodeDelete();
 
-
-console.log(list)
+console.log(list);

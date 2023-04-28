@@ -4,8 +4,8 @@ const newArr = [];
 
 const merge = (arr, left, mid, right) => {
   let i = left,
-    j = mid + 1;
-  let k = i;
+    j = mid + 1,
+    k = i;
 
   // twice array check
   while (i <= mid && j <= right) {

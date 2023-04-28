@@ -1,3 +1,10 @@
+/**TIME COMPLEXITY
+ * constant f(n = 1,2...) = O(1)
+ * logarithm f(log n) = O(log n)
+ * linear f(n + 1, 5, 800...) = O(n)
+ * Quadratic f(n2) = O(n2)
+ */
+
 /**constant time complexity => O(1)
  * @param {constant time complexity => O(1)}
  */

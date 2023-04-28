@@ -1,4 +1,3 @@
-
 /*1. A "Node" class that encapsulates a node of the linked list.
 2. A "LinkedList" class that implements the linked list data structure.
 3. Supports adding a node at the beginning of the linked list.
@@ -72,14 +71,14 @@ class AssignmentOfLinkedList {
       this.length++;
     }
   }
-  // Find node position 
+  // Find node position
   findNodePosition(position) {
     let data = this.head;
     let count = 1;
 
     while (data) {
       if (count === position) break;
-      count++; 
+      count++;
       data = data.next;
     }
     return data;
@@ -95,8 +94,9 @@ class AssignmentOfLinkedList {
   //7. Supports removing a node from the end of the linked list.
   deleteLastNode() {
     let data = this.head;
-    let tail, length = 1;
-    
+    let tail,
+      length = 1;
+
     while (length <= this.length) {
       if (data.next === this.tail) {
         tail = data;
@@ -130,7 +130,7 @@ class AssignmentOfLinkedList {
     let length = 1;
     while (length <= this.length) {
       if (data.value === value) {
-        console.log(data.value, length)
+        console.log(data.value, length);
         return data.value, length;
       }
       length++;
@@ -145,27 +145,27 @@ class AssignmentOfLinkedList {
     place.value = value;
   }
   //11. Supports concatenating two linked lists.
-  concatenatingTwoLinkedList() {
-    
-  }
+  concatenatingTwoLinkedList() {}
   //12. Supports reversing the linked list.
   ascendingNode() {
     let data = this.head;
-    let length = 1, arr = [];
+    let length = 1,
+      arr = [];
     while (length <= this.length) {
       console.log(data.value);
-      arr.push(data.value)
+      arr.push(data.value);
       data = data.next;
       this.length--;
     }
-    console.log(arr)
+    console.log(arr);
     return arr;
   }
   descendingNode() {
     let data = this.tail;
-    let length = 1, arr = [];
+    let length = 1,
+      arr = [];
     while (length <= this.length) {
-      console.log(data.value)
+      console.log(data.value);
       arr.push(data.value);
       data = data.pre;
       this.length--;
@@ -187,7 +187,7 @@ class AssignmentOfLinkedList {
     console.log(slow.value, count);
     return slow.value, count;
   }*/
-  
+
   //15. Detect cycle in a linked list.
   circleNode() {
     let slow = this.head;
@@ -196,7 +196,7 @@ class AssignmentOfLinkedList {
       slow = slow.next;
       fast = fast.next.next;
       if (slow === fast) {
-        console.log(slow.value, fast.value)
+        console.log(slow.value, fast.value);
         return true;
       }
     }
@@ -204,16 +204,13 @@ class AssignmentOfLinkedList {
   }
 }
 
-
-
-
 const list = new AssignmentOfLinkedList(30);
-list.preInsertNode(20)
+list.preInsertNode(20);
 // list.preInsertNode(2)
-list.postInsertNode(40)
-list.insertAnyPosition(1, 10)
-list.insertAnyPosition(5, 50)
-list.insertAnyPosition(6, 60)
+list.postInsertNode(40);
+list.insertAnyPosition(1, 10);
+list.insertAnyPosition(5, 50);
+list.insertAnyPosition(6, 60);
 // list.deleteFirstNode()
 // list.deleteLastNode();
 // list.deleteAnyPosition(1);
@@ -222,10 +219,5 @@ list.insertAnyPosition(6, 60)
 // list.ascendingNode()
 // list.descendingNode()
 
-list.circleNode()
-console.log(list)
-
-
-
-
-
+list.circleNode();
+console.log(list);

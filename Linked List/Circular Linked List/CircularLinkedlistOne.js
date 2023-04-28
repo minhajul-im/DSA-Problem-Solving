@@ -39,7 +39,7 @@ class CircularLinkList {
     this.length++;
   }
 
-  // find Node 
+  // find Node
   findNode(position) {
     let head = this.head;
     let count = 1;
@@ -48,10 +48,10 @@ class CircularLinkList {
       count++;
       head = head.next;
     }
-    return head
+    return head;
   }
-  
-  // insert any position 
+
+  // insert any position
   insertMid(position, value) {
     let node = new Node(value);
     if (position === 1) {
@@ -69,7 +69,7 @@ class CircularLinkList {
       this.length++;
     }
   }
-  
+
   // delete Node
   deleteNode(position) {
     let prePosition = this.findNode(position - 1);
@@ -105,20 +105,19 @@ class CircularLinkList {
     this.head.pre = this.tail;
     this.length--;
   }
-  
+
   // Either one must be selected, both cannot be printed together. Because, depending on the length it is printed.
   //ascending print
   printAscendingNode() {
-    console.log(this.length)
+    console.log(this.length);
     let head = this.head;
     let length = 1;
-    
+
     while (length <= this.length) {
       console.log(head.value);
       this.length--;
       head = head.next;
     }
-    
   }
   // descending print
   /**
@@ -132,21 +131,21 @@ class CircularLinkList {
     }
   }
   */
-  
+
   //update Node
   updateNode(position, value) {
     let head = this.head;
     let count = 1;
     while (head) {
       if (position === count) {
-        head.value = value
+        head.value = value;
         break;
       }
-      count++; head = head.next;
+      count++;
+      head = head.next;
     }
     return head;
   }
-
 }
 
 const list = new CircularLinkList(10);
@@ -154,15 +153,15 @@ const list = new CircularLinkList(10);
 list.postInsert(20);
 list.postInsert(40);
 list.postInsert(50);
-list.insertMid(3, 30)
-list.preInsert(5)
-// list.deleteNode(2)
-// list.deleteNode(4)
-// list.printAscendingNode()
+list.insertMid(3, 30);
+list.preInsert(5);
+// list.deleteNode(2);
+// list.deleteNode(4);
+// list.printAscendingNode();
 // list.updateNode(1, 100);
 // list.preDeleteNode();
-list.lastDeleteNode()
+list.lastDeleteNode();
 
 // list.printDescendingNode();
 
-console.log(list)
+console.log(list);

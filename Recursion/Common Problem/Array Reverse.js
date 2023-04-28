@@ -3,9 +3,9 @@ const arrayReverse = (arr, start, end) => {
   if (start >= end) return;
 
   // swap array
-  let t = arr[start];
+  let temp = arr[start];
   arr[start] = arr[end];
-  arr[end] = t;
+  arr[end] = temp;
 
   arrayReverse(arr, start + 1, end - 1);
 

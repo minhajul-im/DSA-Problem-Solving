@@ -1,4 +1,5 @@
 // Binary Tree Start
+
 class Node {
   constructor(value, left = null, right = null) {
     this.value = value;
@@ -36,6 +37,7 @@ class BinaryTree {
   }
 }
 const list = new BinaryTree(10);
+
 console.log(list);
 list.insert(5);
 list.insert(13);

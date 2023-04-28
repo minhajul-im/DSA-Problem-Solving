@@ -1,12 +1,11 @@
 //TODO: Doubly link list
-class Node{
+class Node {
   constructor(value, pre = null, next = null) {
     this.value = value;
     this.pre = pre;
     this.next = next;
   }
 }
-
 
 class DoublyLinkedList {
   constructor(value) {
@@ -25,7 +24,7 @@ class DoublyLinkedList {
     this.head = node;
     this.length++;
   }
-  
+
   // post insert node
   postInsertNode(value) {
     let node = new Node(value);
@@ -35,24 +34,24 @@ class DoublyLinkedList {
     this.length++;
   }
 
-  // mid insert 
+  // mid insert
   midInsert(position, value) {
     let place = this.findNode(position - 1);
     // let place2 = this.findNode(position + 1);
     let node = new Node(value);
-    let postPlace = place.next; 
+    let postPlace = place.next;
     node.next = place.next;
     postPlace.pre = node;
     place.next = node;
     node.pre = place;
     this.length++;
   }
-  
-  // find node 
+
+  // find node
   findNode(position) {
     let data = this.head;
     let count = 1;
-    
+
     while (data) {
       if (position === count) break;
       count++;
@@ -68,14 +67,15 @@ class DoublyLinkedList {
       this.length = 0;
     }
   }
-  
+
   // delete last node
   deleteLastNode() {
     let currentNode = this.head;
     let tailNode;
     while (currentNode) {
       if (currentNode.next === this.tail) {
-        tailNode = currentNode; break;
+        tailNode = currentNode;
+        break;
       }
       currentNode = currentNode.next;
     }
@@ -102,22 +102,21 @@ class DoublyLinkedList {
     }
   }
 
-  // update node 
+  // update node
   updateNode(position, value) {
     let place = this.findNode(position);
     place.value = value;
   }
-
 }
 
 const list = new DoublyLinkedList(10);
-list.preInsertNode(5)
-list.postInsertNode(15)
-list.midInsert(3, 12)
+list.preInsertNode(5);
+list.postInsertNode(15);
+list.midInsert(3, 12);
 // list.deletePreNode()
 // list.deleteLastNode();
 // list.deleteMidNode(3)
-list.updateNode(3, 1200)
-list.printNode()
+list.updateNode(3, 1200);
+list.printNode();
 
-console.log(list)
+console.log(list);

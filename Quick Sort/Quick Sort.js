@@ -53,7 +53,7 @@ const quickSort = (arr, left = 0, right = arr.length - 1) => {
   }
   return arr;
 };
-let arr = [10, 20, 5, 2, 9, 19, 40, 30];
-// let arr = [14, 10, 30, 15, 18, 5, 25, 12, 35, 8];
+// let arr = [10, 20, 5, 2, 9, 19, 40, 30];
+let arr = [14, 10, 30, 15, 18, 5, 25, 12, 35, 8];
 
 console.log(quickSort(arr));
