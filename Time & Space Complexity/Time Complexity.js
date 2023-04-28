@@ -67,3 +67,23 @@ const quadraticTimeComplexityBubbleSort = (arr) => {
   return arr;
 };
 console.log(quadraticTimeComplexityBubbleSort([1, 3, 4, 6, 5, 10]));
+
+const quadraticTimeComplexitySelectionSort = (arr) => {
+  let temp;
+
+  for (let i = 0; i < arr.length; i++) {
+    let minIndex = i;
+
+    for (let j = i; j < arr.length; j++) {
+      if (arr[minIndex] > arr[j]) {
+        minIndex = j;
+      }
+    }
+    temp = arr[minIndex];
+    arr[minIndex] = arr[i];
+    arr[i] = temp;
+  }
+
+  return arr;
+};
+console.log(quadraticTimeComplexitySelectionSort([1, 3, 4, 6, 5, 10]));
