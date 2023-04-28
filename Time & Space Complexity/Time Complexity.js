@@ -45,3 +45,25 @@ const linearTimeComplexity = (num, target) => {
   }
 };
 console.log(linearTimeComplexity([1, 3, 4, 6, 5, 10], 5));
+
+/**quadratic time complexity => O(n2);
+ * @param {quadratic time complexity => O(n2)}
+ */
+const quadraticTimeComplexityBubbleSort = (arr) => {
+  // example
+  const quadraticMeans = `Where the time taken by the algorithm increases exponentially with the size of the input. In other words, as the size of the input increases, the time taken by the algorithm increases at a much faster rate than the input size.
+  An example of an algorithm with quadratic time complexity is bubble sort. In bubble sort, the input array is repeatedly traversed, comparing adjacent elements and swapping them if they are in the wrong order. This means that the time taken by the algorithm increases quadratically with the size of the input array, making it less efficient than some other sorting algorithms, such as selection sort, quicksort & merge sort.`;
+
+  // implement
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i; j < arr.length; j++) {
+      if (arr[i] > arr[j]) {
+        let temp = arr[j];
+        arr[j] = arr[i];
+        arr[i] = temp;
+      }
+    }
+  }
+  return arr;
+};
+console.log(quadraticTimeComplexityBubbleSort([1, 3, 4, 6, 5, 10]));
