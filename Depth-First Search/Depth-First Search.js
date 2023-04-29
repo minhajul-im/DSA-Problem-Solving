@@ -41,17 +41,21 @@ class DepthFirstSearch {
    */
 
   // in order traversing
-  inOrder(root) {
+  inOrder(root, item) {
     if (root.left) {
-      this.inOrder(root.left);
+      this.inOrder(root.left, item);
     }
 
     //print
     console.log(root.value);
+    item.push(root.value);
 
     if (root.right) {
-      this.inOrder(root.right);
+      this.inOrder(root.right, item);
     }
+
+    console.log(item);
+    return item;
   }
 
   // pre order traversing
@@ -93,7 +97,7 @@ depth.insert(12);
 depth.insert(6);
 depth.insert(9);
 
-depth.inOrder(depth.root);
+console.log(depth.inOrder(depth.root, []));
 depth.preOrder(depth.root);
 depth.postOrder(depth.root);
 
