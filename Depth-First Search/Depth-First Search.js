@@ -83,6 +83,38 @@ class DepthFirstSearch {
 
     console.log(root.value);
   }
+
+  //pre order traversing
+  preOrderTraversing(root) {
+    if (!root) return;
+
+    console.log(root.value);
+    this.preOrderTraversing(root.left);
+
+    this.preOrderTraversing(root.right);
+  }
+
+  //in order traversing
+  inOrderTraversing(root) {
+    if (!root) return;
+
+    this.inOrderTraversing(root.left);
+
+    console.log(root.value);
+
+    this.inOrderTraversing(root.right);
+  }
+
+  //pre order traversing
+  postOrderTraversing(root) {
+    if (!root) return;
+
+    this.postOrderTraversing(root.left);
+
+    this.postOrderTraversing(root.right);
+
+    console.log(root.value);
+  }
 }
 const depth = new DepthFirstSearch(10);
 depth.insert(5);
@@ -100,5 +132,8 @@ depth.insert(9);
 console.log(depth.inOrder(depth.root, []));
 depth.preOrder(depth.root);
 depth.postOrder(depth.root);
+depth.preOrderTraversing(depth.root);
+depth.inOrderTraversing(depth.root);
+depth.postOrderTraversing(depth.root);
 
 console.log(depth);
