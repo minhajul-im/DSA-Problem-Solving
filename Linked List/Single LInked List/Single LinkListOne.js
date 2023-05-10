@@ -3,7 +3,7 @@ class Node {
     this.value = value;
     this.next = next;
   }
-} 
+}
 
 class SingleLinkList {
   constructor(value) {
@@ -32,12 +32,10 @@ class SingleLinkList {
   // any place insert Node
   midInsert(position, value) {
     if (position === 1) {
-      this.preInsert(value)
-    }
-    else if (position === this.length + 1) {
-      this.insertNode(value)
-    }
-     else{
+      this.preInsert(value);
+    } else if (position === this.length + 1) {
+      this.insertNode(value);
+    } else {
       let prePosition = this.findPosition(position - 1);
       let node = new Node(value);
       node.next = prePosition.next;
@@ -53,7 +51,7 @@ class SingleLinkList {
 
     while (head) {
       if (position === count) break;
-      count++; 
+      count++;
       head = head.next;
     }
     return head;
@@ -74,7 +72,8 @@ class SingleLinkList {
     let tailData;
     while (currentData) {
       if (currentData.next === tailData) {
-        tailData = currentData; break;
+        tailData = currentData;
+        break;
       }
       currentData = currentData.next;
     }
@@ -92,20 +91,42 @@ class SingleLinkList {
     }
   }
 
+  reverseNode(head) {
+    let arr = [];
+    while (head) {
+      arr.push(head.value);
+      head = head.next;
+    }
+    return arr.reverse();
+  }
+  reverse(head) {
+    let pre = null,
+      post = null;
+
+    while (head) {
+      post = pre;
+      pre = head;
+      head = head.next;
+      pre.next = post;
+    }
+    return pre;
+  }
 }
 
 const list = new SingleLinkList(10);
 list.insertNode(20);
 list.insertNode(30);
 list.insertNode(40);
-list.preInsert(5)
-list.midInsert(4, 25)
-list.midInsert(1, 2)
-list.deleteNode(1)
+// list.preInsert(5)
+// list.midInsert(4, 25)
+// list.midInsert(1, 2)
+// list.deleteNode(1)
 
-list.deleteLastNode();
+// list.deleteLastNode();
 
-list.printNode()
+// list.printNode()
 
-
+console.log(list.reverse2(list.head));
+// console.log(list.reverseNode(list.head));
+console.log(list.reverse(list.head));
 console.log(list);
