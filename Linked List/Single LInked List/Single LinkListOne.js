@@ -111,6 +111,15 @@ class SingleLinkList {
     }
     return pre;
   }
+  // reverse2 recursive
+  reverse2(head, pre = null) {
+    if (!head) return pre;
+
+    const node = head.next;
+    head.next = pre;
+
+    return this.reverse2(node, head);
+  }
 }
 
 const list = new SingleLinkList(10);
