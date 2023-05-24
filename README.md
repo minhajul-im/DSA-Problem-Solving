@@ -33,7 +33,7 @@ The types of linear data structures are Array, Queue, Stack, Linked List......
 
 What is a Non-linear data structure?
 
-A non-linear data structure is also another type of data structure in which the data elements are not arranged in a contiguous manner. As the arrangement is nonsequential, so the data elements cannot be traversed or accessed in a single run. In the case of linear data structure, element is connected to two elements (previous and the next element), whereas, in the non-linear data structure, an element can be connected to more than two elements.
+A non-linear data structure is also another type of data structure in which the data elements are not arranged in a contiguous manner. As the arrangement is non-sequential, so the data elements cannot be traversed or accessed in a single run. In the case of linear data structure, element is connected to two elements (previous and the next element), whereas, in the non-linear data structure, an element can be connected to more than two elements.
 
 Trees and Graphs are the types of non-linear data structure.
 
