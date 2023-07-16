@@ -18,3 +18,8 @@ var rotate = function (nums, k) {
 
   reverseArr(k, nums.length - 1);
 };
+
+let nums = [1, 2, 3, 4, 5, 6, 7],
+  k = 3;
+
+console.log(rotate(nums, k));
