@@ -15,21 +15,3 @@ const linearSearch = (data, target) => {
   return `Data isn't Found`; // when condition false return.
 };
 console.log(linearSearch(data, target)); // Function called.
-
-// We will see some building methods of JavaScript.
-
-//includes.
-const includes = (data, target) => data.includes(target);
-console.log(includes(data, target));
-
-// indexOf
-const indexOf = (data, target) => data.indexOf(target);
-console.log(indexOf(data, target));
-
-//find
-const find = (data, target) => data.find((item) => item === target);
-console.log(find(data, target));
-
-// findIndex.
-const findIndex = (data, target) => data.findIndex((item) => item === target);
-console.log(findIndex(data, target));
