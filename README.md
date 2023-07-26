@@ -1,6 +1,6 @@
-# DSA (Data Structure & Algorithms)
+# <h1> DSA (Data Structure & Algorithms) </h1>
 
-We will explore data structure & algorithm.
+# We will explore data structure & algorithm.
 
 What is "DSA"?
 "DSA" means Data Structure & Algorithm.
