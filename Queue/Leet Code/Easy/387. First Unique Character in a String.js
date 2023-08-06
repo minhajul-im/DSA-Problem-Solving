@@ -23,3 +23,7 @@ var firstUniqChar = function (s) {
 
   return -1;
 };
+
+let s = "leetcode";
+
+console.log(firstUniqChar(s));
