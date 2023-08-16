@@ -23,3 +23,20 @@ if tail = ø
 tail = node
 end
 end Prepend
+
+
+#Search
+
+Contains(head, value)
+Pre: head is the head node in the list
+value is the value to search for
+Post: the item is either in the linked list, true; otherwise false
+node = head
+while node != ø and node.value != value
+node = node.next
+end while
+if node = ø
+return false
+end if
+return true
+end Contains
