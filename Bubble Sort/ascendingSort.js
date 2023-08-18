@@ -19,6 +19,8 @@ const ascendingBubbleSort = (data) => {
       }
     }
   }
+
   return data;
 };
+
 ascendingBubbleSort(data);
