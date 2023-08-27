@@ -12,3 +12,24 @@
  * locally optimal choices consistently result in a globally optimal
  * solution for the given problem.
  */
+const data = [1, 50, 100, 200, 500, 2, 5, 10, 20, 1000];
+
+const greedy = (data, target) => {
+  // you have to sort
+  let arr = data.sort((x, y) => x - y);
+
+  let count = 0,
+    notes = [];
+
+  for (let i = arr.length; i >= 0; i--) {
+    while (target >= arr[i]) {
+      count++;
+      target = target - arr[i];
+      notes.push(arr[i]);
+    }
+  }
+
+  return { count, notes };
+};
+
+console.log(greedy(data, 231));
