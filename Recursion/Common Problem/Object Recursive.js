@@ -66,3 +66,18 @@ const electronics = {
       electronics_phone_name: "s-23 ultra"
   }
    */
+
+const finalObject = {};
+
+const fantastic = (objectName, object) => {
+  for (const key in object) {
+    if (typeof object[key] === "object") {
+      fantastic(`${objectName}_${key}`, object[key]);
+    } else {
+      finalObject[objectName + "_" + key] = object[key];
+    }
+  }
+};
+
+fantastic("electronics", electronics);
+console.log(finalObject);
